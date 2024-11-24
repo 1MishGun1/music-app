@@ -1,13 +1,9 @@
-import { Header } from "./components/Header/Header";
-import { Footer } from "./components/Footer/Footer";
+import supaBase from "./api/supabaseClient";
+import { Router } from "./router/Router";
 
 const App = () => {
-  return (
-    <div className="App">
-      <Header />
-      <Footer />
-    </div>
-  );
+  console.log(supaBase);
+  return <Router />;
 };
 
 export default App;
