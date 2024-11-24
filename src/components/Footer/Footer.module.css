@@ -1,0 +1,14 @@
+.footer {
+  position: absolute;
+  bottom: 0;
+  border-top: 1px solid white;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  /* padding-bottom: 30px; */
+}
+
+.dev__footer {
+  font-size: 20px;
+  margin: 15px 0;
+}

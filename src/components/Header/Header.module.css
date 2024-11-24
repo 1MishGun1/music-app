@@ -1,0 +1,25 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 15px;
+}
+
+.header__logo {
+  font-size: 24px;
+  color: white;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.items__nav {
+  display: flex;
+  gap: 10px;
+}
+
+.item__nav {
+  color: white;
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: 700;
+}
