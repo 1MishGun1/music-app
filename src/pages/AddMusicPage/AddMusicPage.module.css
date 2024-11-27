@@ -51,3 +51,17 @@ input[type="file"]::file-selector-button {
   font-weight: 700;
   border-radius: 5px;
 }
+
+@media (width < 420px) {
+  input[type="file"]::file-selector-button {
+    font-size: 12px;
+  }
+
+  .add_music__btn {
+    font-size: 12px;
+  }
+
+  .message__upload {
+    font-size: 12px;
+  }
+}

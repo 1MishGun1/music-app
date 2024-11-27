@@ -26,3 +26,11 @@ body {
 li {
   list-style: none;
 }
+
+@media (width < 420px) {
+  header,
+  main,
+  footer {
+    padding: 0 30px;
+  }
+}

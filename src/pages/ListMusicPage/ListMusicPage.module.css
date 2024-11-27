@@ -30,3 +30,9 @@
   border: 1px solid white;
   border-radius: 5px;
 }
+
+@media (width < 420px) {
+  .music__item {
+    max-width: 100%;
+  }
+}

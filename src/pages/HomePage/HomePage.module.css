@@ -36,3 +36,19 @@
   padding: 5px;
   border-radius: 2px;
 }
+
+@media (width < 420px) {
+  .home {
+    height: 80vh;
+  }
+
+  .slogan {
+    font-size: 40px;
+    text-transform: uppercase;
+  }
+
+  .btn__download {
+    padding: 10px 25px;
+    font-size: 20px;
+  }
+}
