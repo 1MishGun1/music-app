@@ -23,3 +23,13 @@
   font-size: 20px;
   font-weight: 700;
 }
+
+.item__nav_active {
+  background-color: white;
+  padding: 3px 10px;
+  color: black;
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: 700;
+  border-radius: 5px;
+}
