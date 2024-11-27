@@ -8,6 +8,7 @@ export const HomePage = () => {
       <Link to={"/add"} className={Styles["btn__download"]}>
         Запушить
       </Link>
+      <p className={Styles["beta"]}>Beta</p>
     </section>
   );
 };
