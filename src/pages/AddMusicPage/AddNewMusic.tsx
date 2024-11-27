@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import supaBase from "../../api/supabaseClient";
+import Styles from "./AddMusicPage.module.css";
 
 export const AddNewMusic = () => {
   const [file, setFile] = useState<File | null>(null);
@@ -33,12 +34,28 @@ export const AddNewMusic = () => {
 
   return (
     <div>
-      <form onSubmit={handleFormSubmit}>
-        <input type="file" onChange={handleFileChange} />
-        <button type="submit">Запушить файл</button>
+      <h1 className={Styles["list__title"]}>Запушить песенку</h1>
+      <form onSubmit={handleFormSubmit} className={Styles["add_music__form"]}>
+        <label htmlFor="file_input">Выбери свою песенку (ее файлик):</label>
+        <input
+          type="file"
+          id="file_input"
+          accept=".mp3"
+          onChange={handleFileChange}
+          className={Styles["file__input"]}
+          required
+        />
+        <button type="submit" className={Styles["add_music__btn"]}>
+          Запушить файл
+        </button>
+        {/* <p className={Styles["message__upload"]}>Файл запушился успешно!</p> */}
       </form>
-      {successMessage && <p>{successMessage}</p>}
-      {errorMessage && <p>{errorMessage}</p>}
+      {successMessage && (
+        <p className={Styles["message__upload"]}>{successMessage}</p>
+      )}
+      {errorMessage && (
+        <p className={Styles["message__upload"]}>{errorMessage}</p>
+      )}
     </div>
   );
 };

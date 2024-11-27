@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import supaBase from "../../api/supabaseClient";
 import { BASE_URL } from "../../api/supabaseClient";
 import { FaPlay, FaPause } from "react-icons/fa";
+import Styles from "./ListMusicPage.module.css";
 
 export const ListMusicPage = () => {
   const [musicList, setMusicList] = useState<string[]>([]);
@@ -28,13 +29,11 @@ export const ListMusicPage = () => {
 
   const handlePlay = (fileName: string) => {
     if (isPlaying && currentAudio === fileName) {
-      // Если аудио уже играет, останавливаем его
       if (audioElement) {
         audioElement.pause();
         setIsPlaying(false);
       }
     } else {
-      // Если аудио не играет, начинаем воспроизведение
       const newAudio = new Audio(
         `${BASE_URL}/storage/v1/object/musics/${fileName}`
       );
@@ -47,16 +46,19 @@ export const ListMusicPage = () => {
 
   return (
     <div>
-      <h1>Все песенки</h1>
-      <div className="music__items">
+      <h1 className={Styles["list__title"]}>Все песенки</h1>
+      <div className={Styles["music__items"]}>
         {musicList.map((fileName, index) => (
-          <div key={index} className="music__item">
+          <div key={index} className={Styles["music__item"]}>
             {fileName}
-            <button onClick={() => handlePlay(fileName)}>
+            <button
+              onClick={() => handlePlay(fileName)}
+              className={Styles["manage_music__btn"]}
+            >
               {isPlaying && currentAudio === fileName ? (
-                <FaPause />
+                <FaPause className={Styles["music__btn"]} />
               ) : (
-                <FaPlay />
+                <FaPlay className={Styles["music__btn"]} />
               )}
             </button>
           </div>
