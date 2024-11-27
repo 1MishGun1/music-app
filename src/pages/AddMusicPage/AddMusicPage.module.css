@@ -1,0 +1,53 @@
+.list__title {
+  margin-top: 30px;
+  text-transform: uppercase;
+}
+
+input[type="file"]::file-selector-button {
+  border: 1px solid white;
+  border-radius: 5px;
+  background-color: transparent;
+  color: white;
+  width: 100px;
+  height: 30px;
+  font-size: 15px;
+}
+
+.file__input {
+  margin-top: 10px;
+}
+
+.add_music__form {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+}
+
+.add_music__btn {
+  width: 150px;
+  height: 40px;
+  text-transform: uppercase;
+  background-color: transparent;
+  border: 1px solid white;
+  border-radius: 5px;
+  font-weight: 700;
+  color: white;
+  transition: all 0.3s;
+  margin-top: 30px;
+
+  &:hover {
+    background-color: white;
+    color: black;
+  }
+}
+
+.message__upload {
+  margin-top: 40px;
+  background-color: white;
+  color: black;
+  padding: 10px;
+  font-size: 15px;
+  width: 217px;
+  font-weight: 700;
+  border-radius: 5px;
+}
